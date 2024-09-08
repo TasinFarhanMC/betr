@@ -1,7 +1,7 @@
 
 # Betr
 
-**Betr** is a helper project designed to standardize naming conventions in existing C++ projects. Its main purpose is to bring consistency to codebases by applying naming conventions inspired by Rust's guidelines.
+**Betr** \(/ˈbɛtər/\) is a helper project designed to standardize naming conventions in existing C++ projects. Its main purpose is to bring consistency to codebases by applying naming conventions inspired by Rust's guidelines.
 
 ## General Naming Conventions
 
@@ -25,5 +25,5 @@ This project is licensed under the [MIT License](https://choosealicense.com/lice
 
 ## Acknowledgements
 
-- [RFC 430](https://github.com/rust-lang/rfcs/blob/master/text/0430-finalizing-naming-conventions.md)
+- [RFC \#0430](https://github.com/rust-lang/rfcs/blob/master/text/0430-finalizing-naming-conventions.md)
 
