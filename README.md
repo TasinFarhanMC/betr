@@ -40,8 +40,6 @@ consist of a single letter unless it is the last "word". So, we have
 
 [MIT License](https://choosealicense.com/licenses/mit/)
 
-[Apache License, Version 2.0](https://opensource.org/license/apache-2-0)
-
 ## Acknowledgements
 
  - [RFC 430](https://github.com/rust-lang/rfcs/blob/master/text/0430-finalizing-naming-conventions.md)
