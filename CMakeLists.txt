@@ -7,8 +7,7 @@ project(
   LANGUAGES CXX)
 
 add_library(betr INTERFACE)
-target_include_directories(
-  betr INTERFACE "${CMAKE_CURRENT_SOURCE_DIR}/src")
+target_include_directories(betr INTERFACE "$<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}/src>")
 
 install(
   TARGETS betr
