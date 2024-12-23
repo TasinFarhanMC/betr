@@ -4,12 +4,11 @@ project(
   BETR
   VERSION 0.1.0
   DESCRIPTION "A C++ Library With Better Standards"
-  HOMEPAGE_URL "https://github.com/TasinFarhanMC/betr"
   LANGUAGES CXX)
 
 add_library(betr INTERFACE)
 target_include_directories(
-  betr INTERFACE "$<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}/src>")
+  betr INTERFACE "${CMAKE_CURRENT_SOURCE_DIR}/src")
 
 install(
   TARGETS betr
@@ -31,12 +30,11 @@ install(
 
 include(CMakePackageConfigHelpers)
 configure_package_config_file(
-  "${CMAKE_SOURCE_DIR}/BetrConfig.cmake.in"
+  "${CMAKE_CURRENT_SOURCE_DIR}/BetrConfig.cmake.in"
   "${CMAKE_CURRENT_BINARY_DIR}/BetrConfig.cmake"
   INSTALL_DESTINATION lib/cmake/Betr)
 
-install(FILES "${CMAKE_CURRENT_BINARY_DIR}/BetrConfig.cmake"
-        DESTINATION lib/cmake/Betr)
+install(FILES "${CMAKE_CURRENT_BINARY_DIR}/BetrConfig.cmake" DESTINATION lib/cmake/Betr)
 
 include(CPack)
 
