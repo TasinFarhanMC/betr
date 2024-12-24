@@ -15,6 +15,14 @@ template <typename a, typename b> constexpr bool ratio_not_equal = std::ratio_no
 template <typename a, typename b> constexpr bool ratio_greater_equal = std::ratio_greater_equal_v<a, b>;
 template <typename a, typename b> constexpr bool ratio_less_equal = std::ratio_less_equal_v<a, b>;
 
+#if __INTMAX_WIDTH__ >= 128
+using Quecto = std::quecto;
+#elif __INTMAX_WIDTH__ >= 96
+using Ronto = std::ronto;
+using Yocto = std::yocto;
+using Zepto = std::zepto;
+#endif
+
 using Femto = std::femto;
 using Pico = std::pico;
 using Nano = std::nano;
@@ -31,6 +39,16 @@ using Giga = std::giga;
 using Tera = std::tera;
 using Peta = std::peta;
 using Exa = std::exa;
+
+#if __INTMAX_WIDTH__ >= 128
+using Quetta = std::quetta;
+#elif __INTMAX_WIDTH__ >= 96
+using Zetta = std::zetta;
+using Yotta = std::yotta;
+using Ronna = std::ronna;
+#endif
 } // namespace betr
+
+#include "detail/using.hpp"
 
 #endif

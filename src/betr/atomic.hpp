@@ -1,7 +1,6 @@
 #ifndef BETR_ATOMIC_HPP
 #define BETR_ATOMIC_HPP
 
-#include "functional.hpp"
 #include <atomic>
 
 namespace betr {
@@ -26,6 +25,7 @@ using Atomic64 = std::atomic_int64_t;
 using AtomicMax = std::atomic_int64_t;
 using AtomicSize = std::atomic_ptrdiff_t;
 
+#ifdef BETR_FUNCTIONAL_HPP
 template <typename T> class AtomicSignal {
   AtomicFlag flag = false;
   Atomic<T> value;
@@ -49,6 +49,9 @@ public:
 
   AtomicSignal(const T value) { this->value.store(value, std::memory_order_release); }
 };
+#endif
 } // namespace betr
+
+#include "detail/using.hpp"
 
 #endif

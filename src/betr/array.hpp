@@ -4,7 +4,11 @@
 #include <array>
 
 namespace betr {
-template <typename T, std::size_t size> using Array = std::array<T, size>;
+using usize = std::size_t;
+
+template <typename T, usize size> using Array = std::array<T, size>;
 } // namespace betr
+
+#include "detail/using.hpp"
 
 #endif
