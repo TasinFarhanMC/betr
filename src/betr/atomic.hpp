@@ -26,7 +26,7 @@ using Atomic64 = std::atomic_int64_t;
 using AtomicMax = std::atomic_int64_t;
 using AtomicSize = std::atomic_ptrdiff_t;
 
-template <typename T> class Signal {
+template <typename T> class AtomicSignal {
   AtomicFlag flag = false;
   Atomic<T> value;
 
@@ -47,7 +47,7 @@ public:
     flag.clear(std::memory_order_release);
   }
 
-  Signal(const T value) { this->value.store(value, std::memory_order_release); }
+  AtomicSignal(const T value) { this->value.store(value, std::memory_order_release); }
 };
 } // namespace betr
 
