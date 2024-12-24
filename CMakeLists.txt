@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.10)
 
 project(
   BETR
-  VERSION 0.1.2
+  VERSION 0.2.0
   DESCRIPTION "A C++ Library With Better Standards"
   LANGUAGES CXX)
 

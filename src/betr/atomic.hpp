@@ -6,14 +6,34 @@
 
 namespace betr {
 template <typename T> using Atomic = std::atomic<T>;
-using Flag = std::atomic_flag;
+using AtomicFlag = std::atomic_flag;
+using AtomicBool = std::atomic_bool;
+using AtomicChar = std::atomic_char;
+using AtomicInt = std::atomic_int;
+using AtomicUInt = std::atomic_uint;
+
+using AtomicU8 = std::atomic_uint8_t;
+using AtomicU16 = std::atomic_uint16_t;
+using AtomicU32 = std::atomic_uint32_t;
+using AtomicU64 = std::atomic_uint64_t;
+using AtomicUMax = std::atomic_uint64_t;
+using AtomicUSize = std::atomic_size_t;
+
+using Atomic8 = std::atomic_int8_t;
+using Atomic16 = std::atomic_int16_t;
+using Atomic32 = std::atomic_int32_t;
+using Atomic64 = std::atomic_int64_t;
+using AtomicMax = std::atomic_int64_t;
+using AtomicSize = std::atomic_ptrdiff_t;
 
 template <typename T> class Signal {
-  Flag flag = false;
+  AtomicFlag flag = false;
   Atomic<T> value;
 
 public:
   void set(const T value) {
+
+    AtomicBool b;
     flag.test_and_set();
     this->value.store(value, std::memory_order_release);
   }

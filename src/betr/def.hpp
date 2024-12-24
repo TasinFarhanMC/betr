@@ -10,6 +10,8 @@
 #define offset_of(type, member) offsetof(type, member);
 
 namespace betr {
+using uint = unsigned int;
+
 using i8 = int8_t;
 using i16 = int16_t;
 using i32 = int32_t;
