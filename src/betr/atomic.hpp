@@ -1,3 +1,6 @@
+#ifndef BETR_ATOMIC_HPP
+#define BETR_ATOMIC_HPP
+
 #include "functional.hpp"
 #include <atomic>
 
@@ -27,3 +30,5 @@ public:
   Signal(const T value) { this->value.store(value, std::memory_order_release); }
 };
 } // namespace betr
+
+#endif
