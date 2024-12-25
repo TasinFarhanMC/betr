@@ -10,10 +10,10 @@ using std::chrono::duration_values;
 using std::chrono::time_point_cast;
 
 template <typename T>
-concept Clock = requires { std::chrono::is_clock_v<T>; };
+concept ClockType = requires { std::chrono::is_clock_v<T>; };
 
 template <typename T, typename ratio> using Duration = std::chrono::duration<T, ratio>;
-template <Clock clock, typename duration = typename clock::duration> using TimePoint = std::chrono::time_point<clock, duration>;
+template <ClockType clock, typename duration = typename clock::duration> using TimePoint = std::chrono::time_point<clock, duration>;
 
 template <typename T = i64> using NanoSeconds = Duration<T, Nano>;
 template <typename T = i64> using MicroSeconds = Duration<T, Micro>;
@@ -33,7 +33,5 @@ using UTCClock = std::chrono::utc_clock;
 using TAIClock = std::chrono::tai_clock;
 using GPSClock = std::chrono::gps_clock;
 } // namespace betr
-
-#include "detail/using.hpp"
 
 #endif
