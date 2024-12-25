@@ -5,7 +5,7 @@
 #include <span>
 
 namespace betr {
-template <typename T, usize extent> using InitList = std::span<T, extent>;
+template <typename T, usize extent> using Span = std::span<T, extent>;
 } // namespace betr
 
 #endif
