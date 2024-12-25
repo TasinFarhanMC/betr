@@ -5,8 +5,6 @@
 #include <chrono>
 
 namespace betr {
-using i64 = int64_t;
-
 using std::chrono::duration_cast;
 using std::chrono::duration_values;
 using std::chrono::time_point_cast;

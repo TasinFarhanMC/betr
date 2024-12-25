@@ -28,6 +28,8 @@ using umax = uintmax_t;
 #define align_as(alignment)     alignas(alignment)
 #define offset_of(type, member) offsetof(type, member)
 #define declare_type(expr)      decltype(expr)
+
+#define ternary(expr, true_expr, false_expr) ((expr) ? (true_expr) : (false_expr))
 #endif
 
 #endif

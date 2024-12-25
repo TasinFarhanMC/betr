@@ -1,6 +1,7 @@
 #ifndef BETR_ATOMIC_HPP
 #define BETR_ATOMIC_HPP
 
+#include "def.hpp"
 #include <atomic>
 
 namespace betr {

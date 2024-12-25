@@ -1,6 +1,7 @@
 #ifndef BETR_VECTOR_HPP
 #define BETR_VECTOR_HPP
 
+#include "def.hpp"
 #include <vector>
 
 namespace betr {

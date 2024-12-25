@@ -1,11 +1,10 @@
 #ifndef BETR_RATIO_HPP
 #define BETR_RATIO_HPP
 
+#include "def.hpp"
 #include <ratio>
 
 namespace betr {
-using imax = intmax_t;
-
 using std::ratio_add;
 using std::ratio_subtract;
 

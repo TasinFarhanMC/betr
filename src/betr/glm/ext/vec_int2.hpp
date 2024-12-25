@@ -1,6 +1,7 @@
 #ifndef BETR_GLM_EXT_VEC_INT2_HPP
 #define BETR_GLM_EXT_VEC_INT2_HPP
 
+#include "../../def.hpp"
 #include <glm/ext/vector_int2.hpp>
 
 namespace betr {
