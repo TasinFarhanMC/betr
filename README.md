@@ -4,7 +4,7 @@
 
 ## General Naming Conventions
 
-For a detailed version, refer to [CONVENTIONS.md](CONVENTIONS.md).
+For a detailed documentation, refer to [DOCS.md](DOCS.md).
 
 In general, Rust uses `UpperCamelCase` for type-level constructs (types and traits) and `snake_case` for value-level constructs. The proposed conventions are:
 
