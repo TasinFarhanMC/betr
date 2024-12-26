@@ -23,11 +23,11 @@ using umax = uintmax_t;
 } // namespace betr
 
 #ifdef BETR_NAMESPACE_HPP
-#define size_of(type)           sizeof(type)
-#define align_of(type)          alignof(type)
-#define align_as(alignment)     alignas(alignment)
+#define size_of(type) sizeof(type)
+#define align_of(type) alignof(type)
+#define align_as(alignment) alignas(alignment)
 #define offset_of(type, member) offsetof(type, member)
-#define declare_type(expr)      decltype(expr)
+#define declare_type(expr) decltype(expr)
 
 #define ternary(expr, true_expr, false_expr) ((expr) ? (true_expr) : (false_expr))
 #endif

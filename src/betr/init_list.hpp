@@ -1,7 +1,6 @@
 #ifndef BETR_INIT_LIST_HPP
 #define BETR_INIT_LIST_HPP
 
-#include "def.hpp"
 #include <initializer_list>
 
 namespace betr {

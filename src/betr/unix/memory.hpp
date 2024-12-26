@@ -4,7 +4,6 @@
 #include "../def.hpp"
 #include <new>
 #include <sys/mman.h>
-#include <unistd.h>
 
 namespace betr {
 template <typename T> T *new_page(usize n, const T &val = T()) {

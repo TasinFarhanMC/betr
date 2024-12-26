@@ -1,7 +1,6 @@
 #ifndef BETR_THREAD_HPP
 #define BETR_THREAD_HPP
 
-#include "def.hpp"
 #include <string>
 
 namespace betr {

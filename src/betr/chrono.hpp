@@ -9,11 +9,10 @@ using std::chrono::duration_cast;
 using std::chrono::duration_values;
 using std::chrono::time_point_cast;
 
-template <typename T>
-concept ClockType = requires { std::chrono::is_clock_v<T>; };
+template <typename T> concept ClockType = requires { std::chrono::is_clock_v<T>; };
+template <ClockType clock, typename duration = typename clock::duration> using TimePoint = std::chrono::time_point<clock, duration>;
 
 template <typename T, typename ratio> using Duration = std::chrono::duration<T, ratio>;
-template <ClockType clock, typename duration = typename clock::duration> using TimePoint = std::chrono::time_point<clock, duration>;
 
 template <typename T = i64> using NanoSeconds = Duration<T, Nano>;
 template <typename T = i64> using MicroSeconds = Duration<T, Micro>;

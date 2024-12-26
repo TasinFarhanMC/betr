@@ -1,7 +1,6 @@
 #ifndef BETR_FUNCTIONAL_HPP
 #define BETR_FUNCTIONAL_HPP
 
-#include "def.hpp"
 #include <functional>
 
 namespace betr {
