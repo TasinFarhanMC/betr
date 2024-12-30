@@ -14,16 +14,16 @@ template <ClockType clock, typename duration = typename clock::duration> using T
 
 template <typename T, typename ratio> using Duration = std::chrono::duration<T, ratio>;
 
-template <typename T = i64> using NanoSeconds = Duration<T, Nano>;
-template <typename T = i64> using MicroSeconds = Duration<T, Micro>;
-template <typename T = i64> using MilliSeconds = Duration<T, Milli>;
-template <typename T = i64> using Seconds = Duration<T, Scaler>;
-template <typename T = i64> using Minutes = Duration<T, Ratio<60>>;
-template <typename T = i64> using Hours = Duration<T, Ratio<60 * 60>>;
-template <typename T = i64> using Days = Duration<T, Ratio<60 * 60 * 24>>;
-template <typename T = i64> using Weeks = Duration<T, Ratio<60 * 60 * 24 * 7>>;
-template <typename T = i64> using Months = Duration<T, std::chrono::months::period>;
-template <typename T = i64> using Years = Duration<T, std::chrono::years::period>;
+using NanoSeconds = Duration<i64, Nano>;
+using MicroSeconds = Duration<i64, Micro>;
+using MilliSeconds = Duration<i64, Milli>;
+using Seconds = Duration<i64, Ratio<1>>;
+using Minutes = Duration<i64, Ratio<60>>;
+using Hours = Duration<i64, Ratio<60 * 60>>;
+using Days = Duration<i64, Ratio<60 * 60 * 24>>;
+using Weeks = Duration<i64, Ratio<60 * 60 * 24 * 7>>;
+using Months = Duration<i64, std::chrono::months::period>;
+using Years = Duration<i64, std::chrono::years::period>;
 
 using HighResClock = std::chrono::high_resolution_clock;
 using SystemClock = std::chrono::system_clock;

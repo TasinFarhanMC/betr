@@ -20,7 +20,6 @@ template <typename T> concept Destructible = std::is_destructible_v<T>;
 template <typename T, typename U> concept CommonReferenceWith = SameAs<std::common_reference_t<T, U>, std::common_reference_t<U, T>> &&
                                                                 ConvertibleTo<T, std::common_reference_t<T, U>> &&
                                                                 ConvertibleTo<U, std::common_reference_t<T, U>>;
-
 template <typename T, typename U> concept CommonWith =
     SameAs<std::common_type_t<T, U>, std::common_type_t<U, T>> &&
     requires {
@@ -128,7 +127,6 @@ template <typename Rel, typename T, typename U> concept Relation =
 
 template <typename Rel, typename T, typename U> concept EquivalenceRelation = Relation<Rel, T, U>;
 template <typename Rel, typename T, typename U> concept StrictWeakOrder = Relation<Rel, T, U>;
-
 } // namespace betr
 
 #endif

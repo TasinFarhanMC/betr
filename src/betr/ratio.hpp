@@ -34,7 +34,6 @@ using Micro = std::micro;
 using Milli = std::milli;
 using Centi = std::centi;
 using Deci = std::deci;
-using Scaler = Ratio<1>;
 using Deca = std::deca;
 using Hecto = std::hecto;
 using Kilo = std::kilo;
