@@ -7,9 +7,9 @@
 
 namespace betr {
 using U8Vec2 = glm::u8vec2;
-using U16Vec2 = glm::u8vec2;
-using U32Vec2 = glm::u8vec2;
-using U64Vec2 = glm::u8vec2;
+using U16Vec2 = glm::u16vec2;
+using U32Vec2 = glm::u32vec2;
+using U64Vec2 = glm::u64vec2;
 } // namespace betr
 
 #endif

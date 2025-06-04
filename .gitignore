@@ -1,3 +1,2 @@
-database/
-vendor/
 .cache/
+vendor
