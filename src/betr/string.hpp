@@ -1,5 +1,5 @@
-#ifndef BETR_THREAD_HPP
-#define BETR_THREAD_HPP
+#ifndef BETR_STRING_HPP
+#define BETR_STRING_HPP
 
 #include <string>
 

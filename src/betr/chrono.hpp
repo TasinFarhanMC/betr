@@ -28,9 +28,11 @@ using Years = Duration<i64, std::chrono::years::period>;
 using HighResClock = std::chrono::high_resolution_clock;
 using SystemClock = std::chrono::system_clock;
 using SteadyClock = std::chrono::steady_clock;
-using UTCClock = std::chrono::utc_clock;
-using TAIClock = std::chrono::tai_clock;
-using GPSClock = std::chrono::gps_clock;
+using FileClock = std::chrono::file_clock;
+using SysClock = std::chrono::system_clock;
+using UtcClock = std::chrono::utc_clock;
+using TaiClock = std::chrono::tai_clock;
+using GpsClock = std::chrono::gps_clock;
 } // namespace betr
 
 #endif
