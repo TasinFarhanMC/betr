@@ -6,7 +6,7 @@
 
 For a detailed documentation, refer to [DOCS.md](DOCS.md).
 
-In general, Rust uses `UpperCamelCase` for type-level constructs (types and traits) and `snake_case` for value-level constructs. The proposed conventions are:
+In general, Betr uses `UpperCamelCase` for type-level constructs (types and traits) and `snake_case` for value-level constructs. The proposed conventions are:
 
 | Item               | Convention           |
 | ------------------ | --------------------- |
