@@ -6,8 +6,7 @@ project(
   DESCRIPTION "A C++ Library With Better Standards"
   LANGUAGES CXX)
 
-set(CMAKE_CXX_STANDARD 23)
-set(CMAKE_CXX_STANDARD_REQUIRED ON)
-
-add_library(betr INTERFACE)
-target_include_directories(betr INTERFACE "${CMAKE_CURRENT_SOURCE_DIR}/src")
+add_library(Betr INTERFACE)
+target_include_directories(Betr INTERFACE "${CMAKE_CURRENT_SOURCE_DIR}/src")
+target_compile_features(Betr PUBLIC cxx_std_23)
+set_property(TARGET Betr PROPERTY CXX_SCAN_FOR_MODULES OFF)
