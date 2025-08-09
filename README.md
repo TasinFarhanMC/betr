@@ -11,10 +11,10 @@ In general, Betr uses `UpperCamelCase` for type-level constructs (types and trai
 | Item               | Convention           |
 | ------------------ | --------------------- |
 | Types              | `UpperCamelCase`      |
-| Enum variants      | `UpperCamelCase`      |
 | Functions          | `snake_case`          |
 | Methods            | `snake_case`          |
 | Local variables    | `snake_case`          |
+| Enum variants      | `SCREAMING_SNAKE_CASE`|
 | Static variables   | `SCREAMING_SNAKE_CASE`|
 | Constant variables | `SCREAMING_SNAKE_CASE`|
 
