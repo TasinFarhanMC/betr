@@ -4,6 +4,6 @@
 #include <unordered_set>
 
 namespace betr {
-template <typename Key, typename Value> using UnorderedSet = std::unordered_set<Key, Value>;
+template <typename T> using UnorderedSet = std::unordered_set<T>;
 }
 #endif
