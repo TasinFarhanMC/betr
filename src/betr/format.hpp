@@ -7,6 +7,7 @@ namespace betr {
 template <typename... args> using FormatString = std::format_string<args...>;
 template <typename... args> using WFormatString = std::wformat_string<args...>;
 
+using std::format;
 } // namespace betr
 
 #endif
