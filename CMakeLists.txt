@@ -8,5 +8,5 @@ project(
 
 add_library(betr INTERFACE)
 target_include_directories(betr INTERFACE "${CMAKE_CURRENT_SOURCE_DIR}/src")
-target_compile_features(betr INTERFACE cxx_std_23)
 set_target_properties(betr PROPERTIES CXX_SCAN_FOR_MODULES OFF)
+target_compile_features(betr INTERFACE cxx_std_23)
