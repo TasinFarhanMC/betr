@@ -11,21 +11,16 @@ using std::ratio_subtract;
 using std::ratio_divide;
 using std::ratio_multiply;
 
-template <typename T> concept RatioType = requires {
-  std::is_same_v<decltype(T::num), imax>;
-  std::is_same_v<decltype(T::den), imax>;
-};
-
 template <imax nominator, imax denominator = 1> using Ratio = std::ratio<nominator, denominator>;
-template <RatioType ratio> using ratio_invert = Ratio<ratio::den, ratio::num>;
+template <typename ratio> using ratio_invert = Ratio<ratio::den, ratio::num>;
 
-template <RatioType a, RatioType b> constexpr bool ratio_greater = std::ratio_greater_v<a, b>;
-template <RatioType a, RatioType b> constexpr bool ratio_equal = std::ratio_equal_v<a, b>;
-template <RatioType a, RatioType b> constexpr bool ratio_less = std::ratio_less_v<a, b>;
+template <typename a, typename b> constexpr bool ratio_greater = std::ratio_greater_v<a, b>;
+template <typename a, typename b> constexpr bool ratio_equal = std::ratio_equal_v<a, b>;
+template <typename a, typename b> constexpr bool ratio_less = std::ratio_less_v<a, b>;
 
-template <RatioType a, RatioType b> constexpr bool ratio_not_equal = std::ratio_not_equal_v<a, b>;
-template <RatioType a, RatioType b> constexpr bool ratio_greater_equal = std::ratio_greater_equal_v<a, b>;
-template <RatioType a, RatioType b> constexpr bool ratio_less_equal = std::ratio_less_equal_v<a, b>;
+template <typename a, typename b> constexpr bool ratio_not_equal = std::ratio_not_equal_v<a, b>;
+template <typename a, typename b> constexpr bool ratio_greater_equal = std::ratio_greater_equal_v<a, b>;
+template <typename a, typename b> constexpr bool ratio_less_equal = std::ratio_less_equal_v<a, b>;
 
 using Femto = std::femto;
 using Pico = std::pico;
@@ -33,6 +28,7 @@ using Nano = std::nano;
 using Micro = std::micro;
 using Milli = std::milli;
 using Centi = std::centi;
+using Unit = Ratio<1>;
 using Deci = std::deci;
 using Deca = std::deca;
 using Hecto = std::hecto;
