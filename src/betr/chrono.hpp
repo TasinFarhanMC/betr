@@ -10,7 +10,7 @@ using std::chrono::duration_values;
 using std::chrono::time_point_cast;
 
 template <typename clock, typename duration = typename clock::duration> using TimePoint = std::chrono::time_point<clock, duration>;
-template <typename T, typename ratio> using Duration = std::chrono::duration<T, ratio>;
+template <typename T, typename ratio = Unit> using Duration = std::chrono::duration<T, ratio>;
 
 using NanoSeconds = Duration<i64, Nano>;
 using MicroSeconds = Duration<i64, Micro>;
